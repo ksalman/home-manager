@@ -19,42 +19,16 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  programs.tmux = {
-    enable = true;
-    shortcut = "a";
-    keyMode = "vi";
-    historyLimit = 50000;
-    extraConfig = ''
 
-      # move between panes with vim like keys
-      bind-key j select-pane -D
-      bind-key k select-pane -U
-      bind-key h select-pane -L
-      bind-key l select-pane -R
-
-    '';
-  };
-
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-    viAlias = true;
-    vimAlias = true; 
-    plugins = [
-      pkgs.vimPlugins.nvim-treesitter
-    ];
-
-   # extraConfig = ''
-   #   set number relativenumber
-   # '';
-  };
-
+  imports = [
+    ./tmux.nix
+    ./neovim.nix
+];
   home.packages = with pkgs; [
     bat
     fd
     git
     jq
     ripgrep
-    tmux
   ];
 }
