@@ -5,13 +5,26 @@
     defaultEditor = true;
     viAlias = true;
     vimAlias = true; 
-    plugins = [
-      pkgs.vimPlugins.nvim-treesitter
-      pkgs.vimPlugins.fzf-vim
-      pkgs.vimPlugins.fzf-checkout-vim
-      pkgs.vimPlugins.vim-nix
-      pkgs.vimPlugins.telescope-nvim
-      pkgs.vimPlugins.gruvbox-community
+    plugins = with pkgs.vimPlugins; [
+      (nvim-treesitter.withPlugins (
+        plugins: with plugins; [
+          # https://github.com/NixOS/nixpkgs/tree/nixos-unstable/pkgs/development/tools/parsing/tree-sitter/grammars
+          tree-sitter-python
+          tree-sitter-nix
+          tree-sitter-bash
+          tree-sitter-dockerfile
+          tree-sitter-dot
+          tree-sitter-yaml
+          tree-sitter-json
+          tree-sitter-lua
+          tree-sitter-regex
+        ]
+      ))
+      fzf-vim
+      fzf-checkout-vim
+      vim-nix
+      telescope-nvim
+      gruvbox-community
     ];
 
     extraConfig = ''
@@ -53,6 +66,10 @@
       nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<CR>
       nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<CR>
       nnoremap <leader>fd :lua require'telescope.builtin'.find_files {cwd = "~/.config",follow=true}<CR>
+
+      " Enable tree-sitter
+      :lua require'nvim-treesitter.configs'.setup { highlight = { enable = true, }, }
+
     '';
   };
 }
