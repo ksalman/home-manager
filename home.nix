@@ -24,11 +24,23 @@
     ./zsh.nix
     ./tmux.nix
     ./neovim.nix
-];
+  ];
+
+  programs.fzf.enable = true;
+  programs.fzf.enableZshIntegration = true;
+
+  # service isn't started automatically, why?
+  # systemctl --user start pueued.service
+  #services.pueue.enable = true;
+
   home.packages = with pkgs; [
+    #pueue
+    ipcalc
     bat
+    entr
     fd
     git
+    htop
     jq
     ripgrep
   ];
