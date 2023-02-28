@@ -31,10 +31,11 @@
 
   # service isn't started automatically, why?
   # systemctl --user start pueued.service
+  # starting/stoping pueued service via home-manager seems buggy so I am running `pueued -d` as needed
   #services.pueue.enable = true;
 
   home.packages = with pkgs; [
-    #pueue
+    pueue
     ipcalc
     bat
     entr
