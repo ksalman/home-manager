@@ -28,6 +28,7 @@
       indent-blankline-nvim
       fugitive
       gitgutter
+      commentary
     ];
 
     extraConfig = ''
