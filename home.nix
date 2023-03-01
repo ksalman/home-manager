@@ -44,5 +44,6 @@
     htop
     jq
     ripgrep
+    visidata
   ];
 }
