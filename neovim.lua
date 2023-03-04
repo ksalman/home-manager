@@ -26,6 +26,7 @@ vim.opt.completeopt = {'menuone', 'noinsert', 'noselect'}
 vim.opt.colorcolumn = "88"
 vim.opt.signcolumn = "yes"
 vim.opt.errorbells = false
+vim.opt.mouse = ""
 vim.wrap = false
 
 vim.g.gruvbox_italics = 1
