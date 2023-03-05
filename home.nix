@@ -45,5 +45,9 @@
     jq
     ripgrep
     visidata
+    # LSP
+    rnix-lsp
+    pyright
+    # LSP
   ];
 }

@@ -48,3 +48,6 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = false,
   },
 }
+
+require'lspconfig'.rnix.setup{}
+require'lspconfig'.pyright.setup{}
