@@ -23,7 +23,7 @@
   imports = [
     ./zsh.nix
     ./tmux.nix
-    ./neovim.nix
+    ./neovim/neovim.nix
   ];
 
   programs.fzf.enable = true;
@@ -48,6 +48,6 @@
     # LSP
     rnix-lsp
     pyright
-    # LSP
+    lua-language-server
   ];
 }

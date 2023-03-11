@@ -29,10 +29,19 @@
       fugitive
       gitgutter
       commentary
+      nvim-lspconfig
+      nvim-cmp
+      cmp-buffer
+      cmp-path
+      cmp-nvim-lsp
+      luasnip
+      cmp_luasnip
+      friendly-snippets
     ];
 
     extraLuaConfig = ''
-      ${builtins.readFile ./neovim.lua}
+      ${builtins.readFile ./base.lua}
+      ${builtins.readFile ./cmp.lua}
     '';
 
   };
