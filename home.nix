@@ -22,7 +22,7 @@
 
   imports = [
     ./zsh.nix
-    ./tmux.nix
+    ./tmux/tmux.nix
     ./neovim/neovim.nix
   ];
 
