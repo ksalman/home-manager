@@ -35,6 +35,7 @@
   #services.pueue.enable = true;
 
   home.packages = with pkgs; [
+    pipenv
     direnv
     nix-direnv
     pueue
