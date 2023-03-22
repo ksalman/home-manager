@@ -4,6 +4,10 @@
     enable = true;
     history.size = 100000;
 
+    initExtra = ''
+      eval "$(direnv hook zsh)"
+    '';
+
   plugins = [
     {
       name = "powerlevel10k";

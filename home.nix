@@ -35,6 +35,8 @@
   #services.pueue.enable = true;
 
   home.packages = with pkgs; [
+    direnv
+    nix-direnv
     pueue
     ipcalc
     bat
