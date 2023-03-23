@@ -5,6 +5,7 @@
     history.size = 100000;
 
     initExtra = ''
+      setopt hist_ignore_space
       eval "$(direnv hook zsh)"
     '';
 
