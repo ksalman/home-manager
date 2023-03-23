@@ -5,6 +5,9 @@
     history.size = 100000;
 
     initExtra = ''
+      # do not pollute history between sessions (tmux panes)
+      unsetopt share_history
+      setopt inc_append_history
       setopt hist_ignore_space
       eval "$(direnv hook zsh)"
     '';
