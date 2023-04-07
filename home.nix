@@ -35,6 +35,11 @@
   #services.pueue.enable = true;
 
   home.packages = with pkgs; [
+    terraform
+    packer
+    sshpass
+    whois # mkpasswd
+    nmap
     pipenv
     direnv
     nix-direnv
