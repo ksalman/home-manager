@@ -38,6 +38,7 @@
     terraform
     packer
     sshpass
+    powershell
     whois # mkpasswd
     nmap
     pipenv
