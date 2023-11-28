@@ -36,6 +36,7 @@
 
   home.packages = with pkgs; [
     terraform
+    terraform-ls
     packer
     sshpass
     powershell

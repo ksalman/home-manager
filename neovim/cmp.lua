@@ -1,5 +1,6 @@
 require'lspconfig'.rnix.setup{}
 require'lspconfig'.pyright.setup{}
+require'lspconfig'.terraformls.setup{}
 
 require'lspconfig'.lua_ls.setup {
     settings = {

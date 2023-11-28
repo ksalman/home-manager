@@ -18,6 +18,7 @@
           tree-sitter-json
           tree-sitter-lua
           tree-sitter-regex
+          tree-sitter-hcl
         ]
       ))
       fzf-vim
