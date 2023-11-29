@@ -5,6 +5,7 @@
   # paths it should manage.
   home.username = "ksalman";
   home.homeDirectory = "/home/ksalman";
+  nixpkgs.config.allowUnfree = true;
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
