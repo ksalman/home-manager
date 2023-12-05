@@ -57,6 +57,7 @@
     jq
     ripgrep
     visidata
+    awscli2
     # LSP
     rnix-lsp
     pyright
