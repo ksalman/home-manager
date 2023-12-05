@@ -58,6 +58,7 @@
     ripgrep
     visidata
     awscli2
+    taskwarrior
     # LSP
     rnix-lsp
     pyright
