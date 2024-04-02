@@ -1,10 +1,10 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, username, pkgs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.username = "ksalman";
-  home.homeDirectory = "/home/ksalman";
+  home.username = username;
+  home.homeDirectory = "/home/" + username;
   nixpkgs.config.allowUnfree = true;
 
   # This value determines the Home Manager release that your
