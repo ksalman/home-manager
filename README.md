@@ -1,6 +1,15 @@
 # Home-manger
 My config for home-manager
 
+* Deploy with flake
+  ```
+  home-manager switch --flake .
+  ```
+* Deploy specific config from flake
+  ```
+  home-manager switch --flake .'#ksalman'
+  ```
+
 ## Linux Notes
 1. We need to install some dependencies on a fresh system
     ```
