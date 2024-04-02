@@ -66,6 +66,7 @@
   ];
 
   home.shellAliases = {
+    cat = "bat";
     ld = "eza -lD";
     lf = "eza -lF --color=always | grep -v /";
     lh = "eza -dl .* --group-directories-first";
