@@ -1,4 +1,4 @@
-require'lspconfig'.rnix.setup{}
+require'lspconfig'.nil_ls.setup{}
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.terraformls.setup{}
 

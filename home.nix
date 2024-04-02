@@ -60,7 +60,7 @@
     awscli2
     taskwarrior
     # LSP
-    rnix-lsp
+    nil # nix
     pyright
     lua-language-server
   ];
