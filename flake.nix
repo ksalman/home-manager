@@ -21,7 +21,7 @@
         pkgs = import nixpkgs { system = "x86_64-linux"; };
         modules = [ ./home.nix ];
       };
-      "ksalman@DESKTOP-TS8OIJA" = home-manager.lib.homeManagerConfiguration {
+      "ksalman" = home-manager.lib.homeManagerConfiguration {
         extraSpecialArgs = {
           username = "ksalman";
         };
