@@ -10,6 +10,43 @@ My config for home-manager
   home-manager switch --flake .'#ksalman'
   ```
 
+## Python workflow
+Use pipenv and direnv
+
+1. Create Pipfile
+   ```
+   cat >Pipfile<<EOF
+   [[source]]
+   url = "https://pypi.org/simple"
+   verify_ssl = true
+   name = "pypi"
+
+   [packages]
+   ansible = "==7.3.0"
+   molecule-docker = "==2.1.0"
+   passlib= "==1.7.4"
+
+   [dev-packages]
+
+   [requires]
+   python_version = "3.10"
+   EOF
+   ```
+2. create venv and install packages
+   ```
+   pipenv install
+   ```
+3. Create .envrc
+   ```
+   cat >.envrc<<EOF
+   layout pipenv
+   EOF
+   ```
+4. Allow direnv
+   ```
+   direnv allow
+   ```
+
 ## Linux Notes
 1. We need to install some dependencies on a fresh system
     ```
