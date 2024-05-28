@@ -52,6 +52,8 @@
     entr
     fd
     git
+    tig
+    lazygit
     eza
     htop
     jq
