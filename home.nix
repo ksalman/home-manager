@@ -38,12 +38,12 @@
   home.packages = with pkgs; [
     terraform
     terraform-ls
-    packer
     sshpass
     powershell
     whois # mkpasswd
     nmap
     pipenv
+    devenv
     direnv
     nix-direnv
     pueue
