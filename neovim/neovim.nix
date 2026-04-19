@@ -5,6 +5,8 @@
     defaultEditor = true;
     viAlias = true;
     vimAlias = true; 
+    withRuby = false;
+    withPython3 = true;
     plugins = with pkgs.vimPlugins; [
       (nvim-treesitter.withPlugins (
         plugins: with plugins; [
@@ -27,9 +29,9 @@
       telescope-nvim
       gruvbox-community
       indent-blankline-nvim
-      fugitive
-      gitgutter
-      commentary
+      vim-fugitive
+      vim-gitgutter
+      vim-commentary
       nvim-lspconfig
       nvim-cmp
       cmp-buffer
@@ -40,8 +42,9 @@
       friendly-snippets
     ];
 
-    extraLuaConfig = ''
+    initLua = ''
       ${builtins.readFile ./base.lua}
+      ${builtins.readFile ./treesitter.lua}
       ${builtins.readFile ./cmp.lua}
     '';
 

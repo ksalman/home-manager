@@ -40,11 +40,3 @@ vim.keymap.set('n', '<leader>fg', builtin.git_files, {})
 vim.keymap.set('n', '<leader>fs', function()
   builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end)
-
--- tree-sitter
-require'nvim-treesitter.configs'.setup {
-  highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = false,
-  },
-}

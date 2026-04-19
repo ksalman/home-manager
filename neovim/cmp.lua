@@ -1,20 +1,33 @@
-require'lspconfig'.nil_ls.setup{}
-require'lspconfig'.pyright.setup{}
-require'lspconfig'.terraformls.setup{}
-
-require'lspconfig'.lua_ls.setup {
-    settings = {
-        Lua = {
-            diagnostics = {
-                globals = { 'vim' }
-            }
-        }
-    }
-}
-
 -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+
+vim.lsp.config('nil_ls', {
+  capabilities = capabilities,
+})
+vim.lsp.enable('nil_ls')
+
+vim.lsp.config('pyright', {
+  capabilities = capabilities,
+})
+vim.lsp.enable('pyright')
+
+vim.lsp.config('terraformls', {
+  capabilities = capabilities,
+})
+vim.lsp.enable('terraformls')
+
+vim.lsp.config('lua_ls', {
+  capabilities = capabilities,
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { 'vim' }
+      }
+    }
+  }
+})
+vim.lsp.enable('lua_ls')
 
 -- nvim-cmp setup
 local cmp = require 'cmp'

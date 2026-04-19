@@ -60,7 +60,8 @@
     ripgrep
     visidata
     awscli2
-    taskwarrior
+    taskwarrior2
+    television
     # LSP
     nil # nix
     pyright
